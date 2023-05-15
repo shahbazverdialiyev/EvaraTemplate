@@ -36,5 +36,10 @@
 
         }
     </select>*@
+    <div class="form-group">
+        <label asp-for="ImgName"></label>
+        <input asp-for="ImgName" class="form-control">
+        <span asp-validation-for="ImgName"></span>
+    </div>
     <button type="submit" class="btn btn-succes">Create</button>
 </form>
