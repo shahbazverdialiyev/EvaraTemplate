@@ -1,14 +1,20 @@
-﻿namespace EvaraTemplate.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace EvaraTemplate.Models
 {
     public class Product
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public decimal Price { get; set; }
-        public int Rate { get; set; }
-        public string ImgUrl { get; set; }
-        public int CatagoryId { get; set; }
-        public Catagory Catagory { get; set; }
-        public ICollection<Tag> Tags { get; set; }
+        [Required(ErrorMessage = "boş qala bilmez"), MaxLength(30, ErrorMessage = "maksimum uzunluq 30 ola biler")]
+        public string Name { get; set; } = null!;
+        [Required(ErrorMessage = "boş qala bilmez")]
+        public decimal? Price { get; set; } = null!;
+        public int? Rate { get; set; }
+        [Required(ErrorMessage = "boş qala bilmez")]
+        public string ImgName { get; set; } = null!;
+        public int? CatagoryId { get; set; }
+        public Catagory? Catagory { get; set; }
+        public ICollection<Tag>? Tags { get; set; }
     }
 }

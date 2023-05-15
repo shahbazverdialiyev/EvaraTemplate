@@ -1,0 +1,50 @@
+﻿@model List<Slider>
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+    <p class="mb-4">
+        DataTables is a third party plugin that is used to generate the demo table below.
+        For more information about DataTables, please visit the <a target="_blank"
+                                                                   href="https://datatables.net">official DataTables documentation</a>.
+    </p>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3 d-flex justify-content-between">
+            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+            <a asp-action="create" class="btn btn-succes" style="font-size:20px;">New</a>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <td>Offer</td>
+                            <td>Title1</td>
+                            <td>Title2</td>
+                            <td>ButtonTitle</td>
+                            <th>Image</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (Slider item in Model)
+                        {
+                            <tr>
+                                <td>@item.Offer</td>
+                                <td>@item.Title1</td>
+                                <td>@item.Title2</td>
+                                <td>@item.ButtonTitle</td>
+                                <td>image</td>
+                                <td><a asp-action="details" asp-route-id="@item.Id">more..</a></td>
+                                <td><a asp-action="update" asp-route-id="@item.Id">edit</a></td>
+                                <td><a asp-action="delete" asp-route-id="@item.Id" class="fs-5">X</a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>

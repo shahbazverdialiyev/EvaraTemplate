@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Vy3rliIZR+AZIYh23rNmzOkY0ngveVyxf0eopTlMcX5OfXJ+eCLu/WSt4S2Z2tEBXwUgCXX4bU7Gm/j400EAcQ==",
+  "dgSpecHash": "QId93t9D2dT1d84Xn+zC7EydgZfjMslhBM/lMxQjznKD5I0DGFEvILcmwqHbMXK/5zHNZHi4uVCM5skE+v2czg==",
   "success": true,
   "projectFilePath": "C:\\Users\\verdi\\source\\repos\\EvaraTemplate\\EvaraTemplate\\EvaraTemplate.csproj",
   "expectedPackageFiles": [
@@ -14,6 +14,7 @@
     "C:\\Users\\verdi\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.16\\microsoft.entityframeworkcore.design.6.0.16.nupkg.sha512",
     "C:\\Users\\verdi\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.16\\microsoft.entityframeworkcore.relational.6.0.16.nupkg.sha512",
     "C:\\Users\\verdi\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.16\\microsoft.entityframeworkcore.sqlserver.6.0.16.nupkg.sha512",
+    "C:\\Users\\verdi\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.16\\microsoft.entityframeworkcore.tools.6.0.16.nupkg.sha512",
     "C:\\Users\\verdi\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\verdi\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.1\\microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
     "C:\\Users\\verdi\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",

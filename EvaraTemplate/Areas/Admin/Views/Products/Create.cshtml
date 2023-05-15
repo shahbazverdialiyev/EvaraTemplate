@@ -1,0 +1,40 @@
+﻿@model Product
+<form class="col-6" method="post">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control">
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Price"></label>
+        <input asp-for="Price" class="form-control">
+        <span asp-validation-for="Price"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Rate"></label>
+        <input asp-for="Rate" class="form-control">
+        <span asp-validation-for="Rate"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ImgName"></label>
+        <input asp-for="ImgName" class="form-control">
+        <span asp-validation-for="ImgName"></span>
+    </div>
+    @*<div class="form-group">
+        <label asp-for="Catagory"></label>
+        <input asp-for="Catagory" class="form-control">
+        <span asp-validation-for="Catagory"></span>
+    </div>*@
+@*    @{
+        int count = 0;
+    }
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Select Catagory</option>
+        @foreach (Catagory catagory in (List<Catagory>) ViewData["catagories"])
+        {
+        <option value="@(++count)">@catagory.Name</option>
+
+        }
+    </select>*@
+    <button type="submit" class="btn btn-succes">Create</button>
+</form>
