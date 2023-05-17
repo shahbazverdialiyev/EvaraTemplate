@@ -52,12 +52,5 @@ namespace EvaraTemplate.Controllers
             return RedirectToAction(nameof(Index));
         }
         // GetCookie ShopCartdadi
-        // GetCookie ShopCartdadi
-        // GetCookie ShopCartdadi
-        // GetCookie ShopCartdadi
-        // GetCookie ShopCartdadi
-        // GetCookie ShopCartdadi
-        // GetCookie ShopCartdadi
-        // GetCookie ShopCartdadi
     }
 }

@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using EvaraTemplate.Models;
+using EvaraTemplate.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.Text.Json;
 
 namespace EvaraTemplate.Controllers
 {
@@ -7,7 +10,7 @@ namespace EvaraTemplate.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View(JsonSerializer.Deserialize<List<CartVM>>(HttpContext.Request.Cookies["basket"]));
         }
     }
 }
