@@ -63,12 +63,17 @@ namespace EvaraTemplate.Controllers
                 ModelState.AddModelError("", "Invalid email or password");
                 return View(login);
             }
-            Microsoft.AspNetCore.Identity.SignInResult signInResult = await _signInManager.CheckPasswordSignInAsync(user, login.Password, false);
+            Microsoft.AspNetCore.Identity.SignInResult signInResult = await _signInManager.PasswordSignInAsync(user, login.Password, true,false);
             if (!signInResult.Succeeded)
             {
                 ModelState.AddModelError("", "Invalid email or password");
                 return View(login);
             }
+            return RedirectToAction("Index", "Home");
+        }
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
     }

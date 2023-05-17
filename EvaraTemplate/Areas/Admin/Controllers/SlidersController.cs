@@ -1,11 +1,13 @@
 ﻿using EvaraTemplate.DAL;
 using EvaraTemplate.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace EvaraTemplate.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     public class SlidersController : Controller
     {
         private readonly EvaraDbContext _evaraDbContext;

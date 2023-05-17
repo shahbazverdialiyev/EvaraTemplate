@@ -1,11 +1,13 @@
 ﻿using EvaraTemplate.DAL;
 using EvaraTemplate.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace EvaraTemplate.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     public class ProductsController : Controller
     {
         readonly EvaraDbContext _evaraDbContext;

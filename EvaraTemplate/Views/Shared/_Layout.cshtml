@@ -189,8 +189,15 @@
                                         <li><a href="#"><img src="~/assets/imgs/theme/flag-ru.png" alt="">Pусский</a></li>
                                     </ul>
                                 </li>
-                                <li><i class="fi-rs-user"></i><a asp-controller="Account" asp-action="Login">Log In</a></li>
-                                <li><a asp-controller="Account" asp-action="Register">Sign Up</a></li>
+                                @if (Context.User.Identity.IsAuthenticated)
+                                {
+                                   <li>@Context.User.Identity.Name</li>
+                                   <li><a asp-controller="Account" asp-action="Logout">Log Out</a></li>
+                                }
+                                else{
+                                      <li><i class="fi-rs-user"></i><a asp-controller="Account" asp-action="Login">Log In</a></li>
+                                      <li><a asp-controller="Account" asp-action="Register">Sign Up</a></li>
+                                }
                             </ul>
                         </div>
                     </div>
@@ -201,7 +208,7 @@
             <div class="container">
                 <div class="header-wrap">
                     <div class="logo logo-width-1">
-                        <a href="index.html"><img src="~/assets/imgs/theme/logo.svg" alt="logo"></a>
+                        <a asp-controller="Home" asp-action="Index"><img src="~/assets/imgs/theme/logo.svg" alt="logo"></a>
                     </div>
                     <div class="header-right">
                         <div class="search-style-2">
