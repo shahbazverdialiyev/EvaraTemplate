@@ -1,10 +1,21 @@
 using EvaraTemplate.DAL;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(opt =>
+{
+    opt.Password.RequireDigit = true;
+    opt.Password.RequiredLength = 6;
+    opt.Password.RequireLowercase = true;
+    opt.Password.RequireUppercase = true;
+    opt.User.RequireUniqueEmail = true;
+})
+    .AddDefaultTokenProviders()
+    .AddEntityFrameworkStores<EvaraDbContext>();
 builder.Services.AddDbContext<EvaraDbContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));

@@ -1,9 +1,10 @@
 ﻿using EvaraTemplate.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace EvaraTemplate.DAL
 {
-    public class EvaraDbContext:DbContext
+    public class EvaraDbContext:IdentityDbContext
     {
         public EvaraDbContext(DbContextOptions<EvaraDbContext> options): base(options)
         {
