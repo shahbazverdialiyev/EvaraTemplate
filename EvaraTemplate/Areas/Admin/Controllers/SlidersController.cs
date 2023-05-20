@@ -3,6 +3,8 @@ using EvaraTemplate.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.IO;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace EvaraTemplate.Areas.Admin.Controllers
 {
@@ -29,12 +31,24 @@ namespace EvaraTemplate.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
+        [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> Create(Slider slider)
         {
-            if (slider==null)
+            if (slider == null)
             {
                 return NotFound();
             }
+            if (!ModelState.IsValid)
+            {
+                return View(slider);
+            }
+            string newFileName = Guid.NewGuid().ToString() + slider.Image.FileName;
+            string path = Path.Combine(_webHostEnvironment.WebRootPath, "assets", "imgs", "slider", newFileName);
+            using (FileStream fileStream = new FileStream(path, FileMode.CreateNew))
+            {
+                await slider.Image.CopyToAsync(fileStream);
+            }
+            slider.ImageName = newFileName;
             await _evaraDbContext.Sliders.AddAsync(slider);
             await _evaraDbContext.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
@@ -54,6 +68,14 @@ namespace EvaraTemplate.Areas.Admin.Controllers
             if (slider == null)
             {
                 return NotFound();
+            }
+            if (slider.ImageName != null)
+            {
+                string path = Path.Combine(_webHostEnvironment.WebRootPath, "assets", "imgs", "slider", slider.ImageName);
+                if (System.IO.File.Exists(path))
+                {
+                    System.IO.File.Delete(path);
+                }
             }
             _evaraDbContext.Sliders.Remove(slider);
             await _evaraDbContext.SaveChangesAsync();
@@ -81,9 +103,21 @@ namespace EvaraTemplate.Areas.Admin.Controllers
             {
                 return View();
             }
+            if (updatedSlider.ImageName != slider.ImageName || updatedSlider.ImageName == null)
+            {
+                updatedSlider.ImageName = Guid.NewGuid().ToString() + updatedSlider.Image.FileName;
+                string path = Path.Combine(_webHostEnvironment.WebRootPath, "assets", "imgs", "slider", slider.ImageName);
+                if (System.IO.File.Exists(path))
+                {
+                    System.IO.File.Delete(path);
+                }
+                path = Path.Combine(_webHostEnvironment.WebRootPath, "assets", "imgs", "slider", updatedSlider.ImageName);
+                using (FileStream fileStream = new FileStream(path, FileMode.Create))
+                {
+                    await updatedSlider.Image.CopyToAsync(fileStream);
+                }
+            }
             updatedSlider.Id = slider.Id;
-            slider.Offer = updatedSlider.Offer;
-            //string path=Path.Combine(_environment.WebRootPath,)   
             _evaraDbContext.Sliders.Update(updatedSlider);
             await _evaraDbContext.SaveChangesAsync();
             return RedirectToAction(nameof(Index));

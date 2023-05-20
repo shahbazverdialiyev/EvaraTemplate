@@ -20,25 +20,25 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
+                            <th>Image</th>
                             <td>Offer</td>
                             <td>Title1</td>
                             <td>Title2</td>
                             <td>ButtonTitle</td>
-                            <th>Image</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach (Slider item in Model)
                         {
                             <tr>
+                                <td><img width="200px" src="~/assets/imgs/slider/@item.ImageName" /></td>
                                 <td>@item.Offer</td>
                                 <td>@item.Title1</td>
                                 <td>@item.Title2</td>
                                 <td>@item.ButtonTitle</td>
-                                <td>image</td>
                                 <td><a asp-action="details" asp-route-id="@item.Id">more..</a></td>
                                 <td><a asp-action="update" asp-route-id="@item.Id">edit</a></td>
-                                <td><a asp-action="delete" asp-route-id="@item.Id" class="fs-5">X</a></td>
+                                <td><form method="post" asp-action="delete" asp-route-id="@item.Id"><button type="submit" class="text-danger fs-5">X</button></form></td>
                             </tr>
                         }
                     </tbody>
