@@ -7521,6 +7521,14 @@
       "PackagePath": "staticwebassets\\assets\\fonts\\uicons\\uicons-regular-straight.woff2"
     },
     {
+      "Id": "C:\\Users\\verdi\\source\\repos\\EvaraTemplate\\EvaraTemplate\\wwwroot\\assets\\imgs\\banner\\8a11e7bc-681c-4768-8272-9cd884868505slider-1.png",
+      "PackagePath": "staticwebassets\\assets\\imgs\\banner\\8a11e7bc-681c-4768-8272-9cd884868505slider-1.png"
+    },
+    {
+      "Id": "C:\\Users\\verdi\\source\\repos\\EvaraTemplate\\EvaraTemplate\\wwwroot\\assets\\imgs\\banner\\9cae09d1-af19-4b31-acf1-d9891442c379brand-1.png",
+      "PackagePath": "staticwebassets\\assets\\imgs\\banner\\9cae09d1-af19-4b31-acf1-d9891442c379brand-1.png"
+    },
+    {
       "Id": "C:\\Users\\verdi\\source\\repos\\EvaraTemplate\\EvaraTemplate\\wwwroot\\assets\\imgs\\banner\\banner-1.png",
       "PackagePath": "staticwebassets\\assets\\imgs\\banner\\banner-1.png"
     },
@@ -7931,10 +7939,6 @@
     {
       "Id": "C:\\Users\\verdi\\source\\repos\\EvaraTemplate\\EvaraTemplate\\wwwroot\\assets\\imgs\\shop\\thumbnail-9.jpg",
       "PackagePath": "staticwebassets\\assets\\imgs\\shop\\thumbnail-9.jpg"
-    },
-    {
-      "Id": "C:\\Users\\verdi\\source\\repos\\EvaraTemplate\\EvaraTemplate\\wwwroot\\assets\\imgs\\slider\\8936847d-faaa-4eab-aaef-c7372965f004slider-7.png",
-      "PackagePath": "staticwebassets\\assets\\imgs\\slider\\8936847d-faaa-4eab-aaef-c7372965f004slider-7.png"
     },
     {
       "Id": "C:\\Users\\verdi\\source\\repos\\EvaraTemplate\\EvaraTemplate\\wwwroot\\assets\\imgs\\slider\\a7b9bb67-dbc7-4d52-9559-3d3970dd8a81slider-2.png",

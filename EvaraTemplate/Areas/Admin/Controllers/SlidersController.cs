@@ -91,7 +91,7 @@ namespace EvaraTemplate.Areas.Admin.Controllers
             return View(slider);
         }
         [HttpPost]
-        public async Task<IActionResult> Update(int id, Slider updatedSlider)
+        public async Task<IActionResult> Update(int id, Slider? updatedSlider)
         {
             Slider? slider = await _evaraDbContext.Sliders
                 .AsNoTracking().Where(s => s.Id == id).FirstOrDefaultAsync();
