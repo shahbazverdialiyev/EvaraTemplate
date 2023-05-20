@@ -30080,6 +30080,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\imgs\banner\8a11e7bc-681c-4768-8272-9cd884868505slider-1.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\imgs\banner\9a2a343d-22b4-4da1-89de-855bd8c36f2fbrand-2.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>EvaraTemplate</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EvaraTemplate</BasePath>
+      <RelativePath>assets/imgs/banner/9a2a343d-22b4-4da1-89de-855bd8c36f2fbrand-2.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\imgs\banner\9a2a343d-22b4-4da1-89de-855bd8c36f2fbrand-2.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\imgs\banner\9cae09d1-af19-4b31-acf1-d9891442c379brand-1.png))">
       <SourceType>Package</SourceType>
       <SourceId>EvaraTemplate</SourceId>

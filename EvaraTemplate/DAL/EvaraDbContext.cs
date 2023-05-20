@@ -15,5 +15,7 @@ namespace EvaraTemplate.DAL
         public DbSet<Tag> Tags { get; set; }
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<Brand> Brands { get; set; }
+        public DbSet<Setting> Settings { get; set; }
+        public DbSet<Image> Images { get; set; }
     }
 }

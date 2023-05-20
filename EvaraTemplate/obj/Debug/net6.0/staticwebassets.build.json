@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "I168CuNulEpOJtlUtRoULgl1qUJiB+EE9I5bIgF79SI=",
+  "Hash": "jAtRTLeePJaQ7EoshQVGiAG8mIlLGCpbqlT2m51wI9U=",
   "Source": "EvaraTemplate",
   "BasePath": "_content/EvaraTemplate",
   "Mode": "Default",
@@ -32009,6 +32009,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\imgs\\banner\\8a11e7bc-681c-4768-8272-9cd884868505slider-1.png"
+    },
+    {
+      "Identity": "C:\\Users\\verdi\\source\\repos\\EvaraTemplate\\EvaraTemplate\\wwwroot\\assets\\imgs\\banner\\9a2a343d-22b4-4da1-89de-855bd8c36f2fbrand-2.png",
+      "SourceId": "EvaraTemplate",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\verdi\\source\\repos\\EvaraTemplate\\EvaraTemplate\\wwwroot\\",
+      "BasePath": "_content/EvaraTemplate",
+      "RelativePath": "assets/imgs/banner/9a2a343d-22b4-4da1-89de-855bd8c36f2fbrand-2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\imgs\\banner\\9a2a343d-22b4-4da1-89de-855bd8c36f2fbrand-2.png"
     },
     {
       "Identity": "C:\\Users\\verdi\\source\\repos\\EvaraTemplate\\EvaraTemplate\\wwwroot\\assets\\imgs\\banner\\9cae09d1-af19-4b31-acf1-d9891442c379brand-1.png",
